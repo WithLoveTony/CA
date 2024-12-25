@@ -18,7 +18,7 @@
 }
 
 .statusBar{
-    animation: opacity 2s ease-out forwards;
+    animation: opacity 5s ease-out forwards;
 }
 
 .card, .header {
