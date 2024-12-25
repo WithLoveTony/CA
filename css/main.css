@@ -22,10 +22,10 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 12px 25px;
+    padding: 14px 25px;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
-    background: #33333309;
+    background: #33333300;
     z-index: 6;
     font-weight: 600;
 }
