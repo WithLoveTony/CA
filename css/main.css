@@ -95,6 +95,7 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    /* flex-wrap: wrap; */
     gap: 16px;
 }
 
@@ -105,6 +106,9 @@ body {
     min-height: 200px;
     height: 30vh;
     max-height: 220px;
+    /* min-width: 300px;
+    width: 100%;
+    max-width: 360px; */
 }
 
 .card-title {
