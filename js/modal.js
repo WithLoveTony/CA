@@ -1,12 +1,12 @@
 const cards = document.querySelectorAll('.card');
 const modal = document.getElementById('cardModal');
-const modalNumber = document.getElementById('modalNumber');
+const modalTitle = document.getElementById('modalTitle');
 const closeButton = document.querySelector('.close-button');
 
 cards.forEach(card => {
     card.addEventListener('click', () => {
         const number = card.getAttribute('data-number');
-        modalNumber.textContent = `Card ${number}`;
+        modalTitle.textContent = `Card ${number}`;
         modal.style.display = 'block';
     });
 });
