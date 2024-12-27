@@ -17,6 +17,17 @@
     }
 }
 
+@keyframes slideUp {
+    from {
+      bottom: -100%; /* Fora da tela */
+      opacity: 0; /* Invisível */
+    }
+    to {
+      bottom: -10%; /* Posição final */
+      opacity: 1; /* Totalmente visível */
+    }
+  }
+
 .statusBar{
     animation: opacity 5s ease-out forwards;
 }

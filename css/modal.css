@@ -1,5 +1,5 @@
 .modal {
-    display: block;
+    display: none;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -14,7 +14,7 @@
     background-color: #141414e3;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
     padding: 40px 20px;
     width: 100%;
     max-width: 500px;
@@ -24,6 +24,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    /* border: 1px solid red; */
+    animation: slideUp 0.5s ease forwards;
 }
 
 .modal-content p {
