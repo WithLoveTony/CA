@@ -29,3 +29,9 @@ const interval = setInterval(() => {
     document.getElementById("timer").innerHTML = "Em breve...";
   }
 }, 1000);  
+
+const audio = document.getElementById('musica');
+    document.addEventListener('click', () => {
+      audio.play();
+      audio.volume = 0.4;
+    });
