@@ -4,7 +4,7 @@ const absoluteText = document.getElementById('absoluteText')
 const logoImg = document.getElementById('logoImg')
 const pressContinue = document.getElementById('pressContinue')
 
-function start(){
+function start() {
   absoluteLogo.classList.toggle('absoluteLogoAni');
   absoluteText.classList.toggle('absoluteTextAni');
   const c = setTimeout(() => {
@@ -13,41 +13,58 @@ function start(){
   }, 500);
 };
 
-function appear(){
+function appear() {
   absoluteText.classList.remove("disappear");
   absoluteText.classList.toggle("appear");
 }
-function disappear(){
-    absoluteText.classList.remove("appear");
-    absoluteText.classList.toggle("disappear");
+function disappear() {
+  absoluteText.classList.remove("appear");
+  absoluteText.classList.toggle("disappear");
 }
 
-const targetDate = new Date().getTime() + 16000;
+const targetDate = new Date("December 31, 2024 00:01:00").getTime();
 const interval = setInterval(() => {
   const now = new Date().getTime();
   const distance = targetDate - now;
 
-  const seconds = Math.floor(distance / 1000);
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("timer").innerHTML = `${seconds}s`;
+  document.getElementById("timer").innerHTML =
+    `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
-  if (distance < 1) {
-    clearInterval(interval);
-    document.getElementById("timer").innerHTML = "Agora";
-    absoluteText.classList.remove("absoluteTextAni");
-    disappear()
-      const c = setTimeout(() => {
-        absoluteText.style.fontWeight = `600`
-        absoluteText.style.fontSize = `clamp(26px, 8vw, 54px)`
-        absoluteText.innerHTML = `Olá!`
-        flowers.style.opacity = '0.3'
-        appear()
-        welcomeCA()
-      }, 2000);
+  // Para o cronômetro quando o tempo acabar
+  if (distance < 0) {
+    const targetDate = new Date().getTime() + 16000;
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const seconds = Math.floor(distance / 1000);
+
+      document.getElementById("timer").innerHTML = `${seconds}s`;
+
+      if (distance < 1) {
+        clearInterval(interval);
+        document.getElementById("timer").innerHTML = "Agora";
+        absoluteText.classList.remove("absoluteTextAni");
+        disappear()
+        const c = setTimeout(() => {
+          absoluteText.style.fontWeight = `600`
+          absoluteText.style.fontSize = `clamp(26px, 8vw, 54px)`
+          absoluteText.innerHTML = `Olá!`
+          flowers.style.opacity = '0.3'
+          appear()
+          welcomeCA()
+        }, 2000);
+      }
+    }, 1000);
   }
 }, 1000);
 
-function welcomeCA(){
+function welcomeCA() {
   const c = setTimeout(() => {
     disappear()
     const c = setTimeout(() => {
@@ -88,7 +105,7 @@ document.addEventListener('click', () => {
   const c = setTimeout(() => {
     audio.play();
     audio.volume = 0.4;
-    if(bugProtector < 2){
+    if (bugProtector < 2) {
       start()
       bugProtector = 2
       console.log(`Exibição protegida`)
