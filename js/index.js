@@ -32,4 +32,4 @@ function updateTime() {
   setInterval(updateTime, 1000);
   updateTime();
 
-
+  const pinCode = localStorage.getItem("pin");

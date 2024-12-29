@@ -39,6 +39,7 @@ function checkCode() {
         applyAnimation("correct"); 
         setTimeout(() => {
             clearFields(); 
+            localStorage.setItem("pin", enteredCode);
             setTimeout(() => {
                 window.location.href = "../index.html";
             }, 50);
