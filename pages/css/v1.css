@@ -28,7 +28,7 @@ body {
     position: absolute;
     top: 35vh;
     z-index: 1000;
-    font-size: clamp(16px, 6.5vw, 48px);
+    font-size: clamp(16px, 6.5vw, 40px);
     text-shadow: 3px 3px 10px rgba(37, 37, 37, 0.808);
     text-align: center;
     opacity: 0;
@@ -44,7 +44,7 @@ body {
     position: absolute;
     top: 30px;
     z-index: 1000;
-    font-size: clamp(14px, 5vw, 30px);
+    font-size: clamp(14px, 5vw, 20px);
     text-align: center;
     display: flex;
     gap: 14px;
@@ -61,10 +61,23 @@ body {
     position: absolute;
     z-index: 1000;
     width: 40vw;
+    max-width: 250px;
     top: 50%;
     left: 50%;
 
     transform: translate(-50%, -50%);
+    animation: fadeIn 2s ease-in forwards;
+}
+
+#pressContinue{
+    position: absolute;
+    bottom: 10vh;
+    z-index: 1000;
+    font-size: clamp(14px, 4vw, 38px);
+    color: #ffffff7a;
+    text-shadow: 3px 3px 10px rgba(37, 37, 37, 0.808);
+    text-align: center;
+    opacity: 0;
     animation: fadeIn 2s ease-in forwards;
 }
 
@@ -77,6 +90,7 @@ body {
     height: 100%;
     filter: blur(0.1vmin);
     background-image: radial-gradient(ellipse at top, transparent 0%, var(--dark-color)), radial-gradient(ellipse at bottom, var(--dark-color), rgba(145, 233, 255, 0.2)), repeating-linear-gradient(220deg, #000 0px, #000 19px, transparent 19px, transparent 22px), repeating-linear-gradient(189deg, #000 0px, #000 19px, transparent 19px, transparent 22px), repeating-linear-gradient(148deg, #000 0px, #000 19px, transparent 19px, transparent 22px), linear-gradient(90deg, #00fffa, #f0f0f0);
+    animation: fadeIn 2s ease-in forwards;
 }
 
 .flowers {

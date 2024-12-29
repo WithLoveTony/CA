@@ -2,6 +2,7 @@ const flowers = document.getElementById('flowers')
 const absoluteLogo = document.getElementById('absoluteLogo')
 const absoluteText = document.getElementById('absoluteText')
 const logoImg = document.getElementById('logoImg')
+const pressContinue = document.getElementById('pressContinue')
 
 function start(){
   absoluteLogo.classList.toggle('absoluteLogoAni');
@@ -9,7 +10,7 @@ function start(){
   const c = setTimeout(() => {
     flowers.classList.remove("not-loaded");
     clearTimeout(c);
-  }, 1000);
+  }, 500);
 };
 
 
@@ -37,6 +38,7 @@ const interval = setInterval(() => {
 const audio = document.getElementById('musica');
 document.addEventListener('click', () => {
   logoImg.style.animation = 'fadeOut 1s ease-in forwards'
+  pressContinue.style.animation = 'fadeOut 1s ease-in forwards'
   const c = setTimeout(() => {
     audio.play();
     audio.volume = 0.4;
