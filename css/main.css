@@ -22,7 +22,7 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 1px 25px;
+    padding: 10px 25px;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     background: #33333300;

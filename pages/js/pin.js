@@ -35,11 +35,11 @@ numbersBtn.forEach((button) => {
 
 function checkCode() {
     const enteredCode = Array.from(inputFields).map(field => field.value).join(""); 
-    if (enteredCode === correctCode) {
+    if (enteredCode === `1004` || enteredCode === `1705` || enteredCode == `0907` || enteredCode === `2302`) {
         applyAnimation("correct"); 
         setTimeout(() => {
             clearFields(); 
-            localStorage.setItem("pin", enteredCode);
+            localStorage.setItem("pin", `${enteredCode}`);
             setTimeout(() => {
                 window.location.href = "../index.html";
             }, 50);

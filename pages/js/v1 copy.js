@@ -22,47 +22,32 @@ function disappear() {
   absoluteText.classList.toggle("disappear");
 }
 
-const targetDate = new Date("December 31, 2024 00:01:00").getTime();
-const interval = setInterval(() => {
-  const now = new Date().getTime();
-  const distance = targetDate - now;
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const targetDate = new Date().getTime() + 16000;
+  const interval = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
 
-  document.getElementById("timer").innerHTML =
-    `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    const seconds = Math.floor(distance / 1000);
 
-  // Para o cronômetro quando o tempo acabar
-  if (distance < 0) {
-    const targetDate = new Date().getTime() + 16000;
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
+    document.getElementById("timer").innerHTML = `${seconds}s`;
 
-      const seconds = Math.floor(distance / 1000);
+    if (distance < 1) {
+      clearInterval(interval);
+      document.getElementById("timer").innerHTML = "Agora";
+      absoluteText.classList.remove("absoluteTextAni");
+      disappear()
+      const c = setTimeout(() => {
+        absoluteText.style.fontWeight = `600`
+        absoluteText.style.fontSize = `clamp(26px, 8vw, 54px)`
+        absoluteText.innerHTML = `Olá!`
+        flowers.style.opacity = '0.6'
+        appear()
+        welcomeCA()
+      }, 2000);
+    }
+  }, 1000);
 
-      document.getElementById("timer").innerHTML = `${seconds}s`;
-
-      if (distance < 1) {
-        clearInterval(interval);
-        document.getElementById("timer").innerHTML = "Agora";
-        absoluteText.classList.remove("absoluteTextAni");
-        disappear()
-        const c = setTimeout(() => {
-          absoluteText.style.fontWeight = `600`
-          absoluteText.style.fontSize = `clamp(26px, 8vw, 54px)`
-          absoluteText.innerHTML = `Olá!`
-          flowers.style.opacity = '0.6'
-          appear()
-          welcomeCA()
-        }, 2000);
-      }
-    }, 1000);
-  }
-}, 1000);
 
 function welcomeCA() {
   const c = setTimeout(() => {

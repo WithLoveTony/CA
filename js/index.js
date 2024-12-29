@@ -1,15 +1,13 @@
-// Seleciona o botão
 const button = document.getElementById('fullscreenButton');
 
 button.addEventListener('click', () => {
-  // Verifica se o navegador suporta a Fullscreen API
   if (document.documentElement.requestFullscreen) {
-    document.documentElement.requestFullscreen(); // Ativa o modo tela cheia
-  } else if (document.documentElement.webkitRequestFullscreen) { // Para navegadores baseados em WebKit
+    document.documentElement.requestFullscreen(); 
+  } else if (document.documentElement.webkitRequestFullscreen) { 
     document.documentElement.webkitRequestFullscreen();
-  } else if (document.documentElement.mozRequestFullScreen) { // Para Firefox
+  } else if (document.documentElement.mozRequestFullScreen) { 
     document.documentElement.mozRequestFullScreen();
-  } else if (document.documentElement.msRequestFullscreen) { // Para IE/Edge
+  } else if (document.documentElement.msRequestFullscreen) { 
     document.documentElement.msRequestFullscreen();
   } else {
     alert("Seu navegador não suporta o modo de tela cheia.");
@@ -33,3 +31,18 @@ function updateTime() {
   updateTime();
 
   const pinCode = localStorage.getItem("pin");
+  const nameHeader = document.getElementById("name");
+
+  if(pinCode == '1004'){
+    console.log('Sara')
+    nameHeader.innerHTML = `Sarinha`
+  }else if(pinCode == '1705'){
+    console.log('Matheus')
+    nameHeader.innerHTML = `Tetheus`
+  }else if(pinCode == '0907'){
+    console.log('Jonathan')
+    nameHeader.innerHTML = `Jotaglace`
+  }else if(pinCode == '2302'){
+    console.log('Júlia')
+    nameHeader.innerHTML = `Julinha`
+  }
