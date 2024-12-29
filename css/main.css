@@ -7,9 +7,11 @@
 }
 
 body {
-    background: -moz-linear-gradient(222deg, rgba(82, 120, 113, 1) 35%, rgba(212, 139, 86, 1) 100%);
-    background: -webkit-linear-gradient(222deg, rgba(82, 120, 113, 1) 35%, rgba(212, 139, 86, 1) 100%);
-    background: linear-gradient(222deg, rgba(82, 120, 113, 1) 35%, rgba(212, 139, 86, 1) 100%);
+    transition: background 1s ease;
+    background: -moz-linear-gradient(222deg, rgb(7, 0, 26) 35%, rgb(32, 1, 37) 100%);
+    background: -webkit-linear-gradient(222deg, rgb(7, 0, 26) 35%, rgb(32, 1, 37) 100%);
+    background: linear-gradient(222deg, rgb(7, 0, 26) 35%, rgb(32, 1, 37) 100%);
+
     min-height: 100vh;
     height: 100%;
     color: #fff;
@@ -30,9 +32,26 @@ body {
     font-weight: 600;
 }
 
+#pressContinue{
+    position: absolute;
+    top: 40vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+#pressContinue p{
+    font-size: clamp(18px, 5vw, 38px);
+    color: #ffffff7a;
+    text-shadow: 3px 3px 10px rgba(37, 37, 37, 0.808);
+    text-align: center;
+    opacity: 0;
+    animation: fadeInLoop 2s infinite;
+}
+
 .header {
     margin-top: 6vh;
     padding: 0 20px;
+    display: none;
 }
 
 .headLogo {
@@ -93,7 +112,7 @@ body {
 
 .card-container {
     padding: 20px;
-    display: flex;
+    display: none;
     flex-direction: column;
     /* flex-wrap: wrap; */
     gap: 16px;
