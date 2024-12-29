@@ -4,23 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/v1.css">
-  <script src="./js/v1.js" defer></script>
+  <link rel="stylesheet" href="./css/v2.css">
+  <link rel="stylesheet" href="../css/animation.css">
+  <script src="./js/v2.js" defer></script>
   <title>Com amor, Toninho</title>
 </head>
 
-<body class="not-loaded">
-  <section class="absoluteLogo">
+<body class="">
+  <section class="absoluteLogo" id="absoluteLogo">
     <img src="../assets/Heart.svg" alt="" srcset="">
     <p class="">Com amor Toninho</p>
   </section>
-  <section class="absoluteText">
+
+  <section class="absoluteText" id="absoluteText">
     <p>Você poderá ver em...</p>
     <h2 id="timer" class="timer"></h2>
     <audio id="musica" src="./audio/Matryoshka - Sacred Play Secret Place.mp3" autoplay loop></audio>
   </section>
+
+
+  <img id="logoImg" src="../assets/Logo CAT.png" alt="" srcset="">
+
+
   <div class="night"></div>
-  <div class="flowers">
+  <div class="not-loaded flowers" id="flowers">
     <div class="flower flower--1">
       <div class="flower__leafs flower__leafs--1">
         <div class="flower__leaf flower__leaf--1"></div>
