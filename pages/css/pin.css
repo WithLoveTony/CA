@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.calculatorBG {
+    position: absolute;
+    opacity: 0;
+    z-index: 2000;
+    top: 25vh;
+    transition: opacity 0.9s ease;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+tr {
+    margin: 0.4rem 0rem 0.4rem 0rem;
+    display: flex;
+    gap: 0.4rem;
+}
+
+tr td button {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0.125rem solid #ffffff1f;
+    background-color: #0000003d;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    color: var(--text);
+    font-size: 1.5rem;
+    font-weight: bold;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:hover {
+    background-color: #35353562;
+    border: 0.125rem solid #ffffff18;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+
+.wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: space-between;
+}
+
+.wrapper input.field {
+    width: 50px;
+    line-height: 75px;
+    font-size: 32px;
+    border: 0.125rem solid #ffffff1f;
+    background-color: #0000003a;
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+button:active {
+    transform: scale(0.9);
+    background-color: #45454579; /* Cor mais escura para o efeito */
+    transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+input.field.wrong {
+    animation: wrong 0.7s ease;
+}
+
+input.field.correct {
+    animation: correct 0.7s ease;
+}
+
+
+

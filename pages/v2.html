@@ -10,27 +10,61 @@
     <meta property="og:url" content="https://withlovetony.github.io/CA/pages/v1.html">
     <link rel="shortcut icon" href="../assets/Logo CAT.png" type="image/x-icon">
   <link rel="stylesheet" href="./css/v1.css">
+  <link rel="stylesheet" href="./css/pin.css">
   <link rel="stylesheet" href="../css/animation.css">
   <script src="./js/v1.js" defer></script>
   <title>Com amor, Toninho</title>
 </head>
 
 <body class="">
+
   <section class="absoluteLogo" id="absoluteLogo">
     <img src="../assets/Heart.svg" alt="" srcset="">
-    <p class="">Com amor Toninho</p>
+    <p class="">Com amor, Toninho</p>
   </section>
 
   <section class="absoluteText" id="absoluteText">
     <p>Você poderá ver em...</p>
     <h2 id="timer" class="timer"></h2>
-    <audio id="musica" src="./audio/Matryoshka - Sacred Play Secret Place.mp3" autoplay loop></audio>
   </section>
 
 
   <img id="logoImg" src="../assets/Logo CAT.png" alt="" srcset="">
   <p id="pressContinue">Aperte para continuar</p>
 
+
+  <div class="calculatorBG" id="pinPad">
+    <div class="wrapper">
+      <input type="text" class="field 1" maxlength="1" disabled>
+      <input type="text" class="field 2" maxlength="1" disabled>
+      <input type="text" class="field 3" maxlength="1" disabled>
+      <input type="text" class="field 4" maxlength="1" disabled>
+    </div>
+    <div class="buttons">
+        <table>
+            <tr>
+                <td><button data-number>7</button></td>
+                <td><button data-number>8</button></td>
+                <td><button data-number>9</button></td>
+            </tr>
+            <tr>
+                <td><button data-number>4</button></td>
+                <td><button data-number>5</button></td>
+                <td><button data-number>6</button></td>
+            </tr>
+            <tr>
+                <td><button data-number>1</button></td>
+                <td><button data-number>2</button></td>
+                <td><button data-number>3</button></td>
+            </tr>
+            <tr style="justify-content: center;">
+                <td><button data-number>0</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<audio id="musica" src="./audio/Matryoshka - Sacred Play Secret Place.mp3" autoplay loop></audio>
 
   <div class="night"></div>
   <div class="not-loaded flowers" id="flowers">
@@ -329,4 +363,6 @@
       </div>
     </div>
   </div>
+
+  <script src="./js/pin.js"></script>
 </body>

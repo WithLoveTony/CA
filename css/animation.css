@@ -8,6 +8,28 @@
         opacity: 1;
     }
 }
+
+@keyframes fadeInLoop {
+    0%{
+        opacity: 0.4;
+    }
+    20% {
+		opacity: 0.6;
+	}
+	40% {
+		opacity: 0.8;
+	}
+	60% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0.8;
+	}
+    100% {
+        opacity: 0.6;
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -37,6 +59,37 @@
     }
   }
 
+  @keyframes wrong {
+	20% {
+		background-color: #5200005e;
+        border: 2px solid crimson;
+	}
+	40% {
+		transform: translate(-15px, 0);
+	}
+	60% {
+		transform: translate(10px, 0);
+	}
+	80% {
+		transform: translate(-5px, 0);
+	}
+}
+@keyframes correct {
+	20% {
+		background-color: #012b005e;
+        border: 2px solid limegreen;
+	}
+	40% {
+		transform: translate(0, -15px);
+	}
+	60% {
+		transform: translate(0, 10px);
+	}
+	80% {
+		transform: translate(0, -5px);
+	}
+}
+
 .statusBar{
     animation: opacity 5s ease-out forwards;
 }
@@ -55,4 +108,11 @@
 
 .card:nth-child(3) {
     animation-delay: 0.1s;
+}
+
+.appear{
+    animation: fadeIn 2s ease-in forwards;
+}
+.disappear{
+    animation: fadeOut 2s ease-in forwards;
 }

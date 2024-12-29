@@ -28,6 +28,7 @@ body {
     position: absolute;
     top: 35vh;
     z-index: 1000;
+    max-width: 90vw;
     font-size: clamp(16px, 6.5vw, 40px);
     text-shadow: 3px 3px 10px rgba(37, 37, 37, 0.808);
     text-align: center;
@@ -37,7 +38,6 @@ body {
 .absoluteTextAni {
     animation: fadeIn 2s ease-in forwards;
     animation-delay: 5s;
-
 }
 
 .absoluteLogo {
@@ -54,7 +54,7 @@ body {
 
 .absoluteLogoAni {
     animation: fadeIn 1s ease-in forwards;
-    animation-delay: 3s;
+    animation-delay: 2s;
 }
 
 #logoImg {
@@ -78,7 +78,7 @@ body {
     text-shadow: 3px 3px 10px rgba(37, 37, 37, 0.808);
     text-align: center;
     opacity: 0;
-    animation: fadeIn 2s ease-in forwards;
+    animation: fadeInLoop 2s infinite;
 }
 
 .night {
@@ -96,6 +96,7 @@ body {
 .flowers {
     position: relative;
     transform: scale(0.9);
+    transition: opacity 0.9s ease;
 }
 
 .flower {
