@@ -22,7 +22,8 @@ const pressContinue = document.getElementById("pressContinue");
 let bugProtector = 1
 
 document.addEventListener('click', () => {
-  if (bugProtector < 2) {
+  if (bugProtector > 2) {
+    // MUDAR A SETINHA PARA FUNCIONAR
     if (document.documentElement.requestFullscreen) {
       document.documentElement.requestFullscreen();
     } else if (document.documentElement.webkitRequestFullscreen) {
@@ -48,7 +49,7 @@ function mailStart() {
   header.style.display = `block`
   cardContainer.style.display = `flex`
 }
-
+// mailStart()
 if (pinCode == '1004') {
   console.log('Sara')
   nameHeader.innerHTML = `Sarinha`
