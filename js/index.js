@@ -17,7 +17,6 @@ updateTime();
 const pinCode = localStorage.getItem("pin");
 const nameHeader = document.getElementById("name");
 const header = document.getElementById("header");
-const cardsC = document.getElementById("cardContainer");
 const pressContinue = document.getElementById("pressContinue");
 let bugProtector = 1
 
@@ -51,15 +50,11 @@ function mailStart() {
 }
 // mailStart()
 if (pinCode == '1004') {
-  console.log('Sara')
-  nameHeader.innerHTML = `Sarinha`
+  generate('SR')
 } else if (pinCode == '1705') {
-  console.log('Matheus')
-  nameHeader.innerHTML = `Tetheus`
+  generate("TH")
 } else if (pinCode == '0907') {
-  console.log('Jonathan')
-  nameHeader.innerHTML = `Jotaglace`
+  generate('JV')
 } else if (pinCode == '2302') {
-  console.log('Júlia')
-  nameHeader.innerHTML = `Julinha`
+  generate('JU')
 }

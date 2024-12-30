@@ -117,9 +117,9 @@
     animation: fadeOut 2s ease-in forwards;
 }
 
-
 .theu{
     background: -moz-linear-gradient(222deg, rgba(82, 120, 113, 1) 35%, rgba(212, 139, 86, 1) 100%);
     background: -webkit-linear-gradient(222deg, rgba(82, 120, 113, 1) 35%, rgba(212, 139, 86, 1) 100%);
     background: linear-gradient(222deg, rgba(82, 120, 113, 1) 35%, rgba(212, 139, 86, 1) 100%);
 }
+
