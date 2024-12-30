@@ -117,9 +117,26 @@
     animation: fadeOut 2s ease-in forwards;
 }
 
-.theu{
-    background: -moz-linear-gradient(222deg, rgba(82, 120, 113, 1) 35%, rgba(212, 139, 86, 1) 100%);
-    background: -webkit-linear-gradient(222deg, rgba(82, 120, 113, 1) 35%, rgba(212, 139, 86, 1) 100%);
-    background: linear-gradient(222deg, rgba(82, 120, 113, 1) 35%, rgba(212, 139, 86, 1) 100%);
+.th{
+    background: -moz-linear-gradient(222deg, rgba(55, 113, 124, 1) 35%, rgba(211, 221, 173, 1) 100%);
+    background: -webkit-linear-gradient(222deg, rgba(55, 113, 124, 1) 35%, rgba(211, 221, 173, 1) 100%);
+    background: linear-gradient(222deg, rgba(55, 113, 124, 1) 35%, rgba(211, 221, 173, 1) 100%);
 }
 
+.jv{
+    background: -moz-linear-gradient(222deg, rgba(75, 50, 94, 1) 35%, rgba(222, 163, 163, 1) 100%);
+    background: -webkit-linear-gradient(222deg, rgba(75, 50, 94, 1) 35%, rgba(222, 163, 163, 1) 100%);
+    background: linear-gradient(222deg, rgba(75, 50, 94, 1) 35%, rgb(222, 163, 202) 100%);
+}
+
+.sr{
+    background: -moz-linear-gradient(222deg, rgba(143, 73, 125, 1) 35%, rgba(208, 175, 129, 1) 100%);
+    background: -webkit-linear-gradient(222deg, rgba(143, 73, 125, 1) 35%, rgba(208, 175, 129, 1) 100%);
+    background: linear-gradient(222deg, rgba(143, 73, 125, 1) 35%, rgba(208, 175, 129, 1) 100%);
+}
+
+.ju{
+    background: -moz-linear-gradient(222deg, rgba(185, 148, 96, 1) 35%, rgba(210, 141, 131, 1) 100%);
+    background: -webkit-linear-gradient(222deg, rgba(185, 148, 96, 1) 35%, rgba(210, 141, 131, 1) 100%);
+    background: linear-gradient(222deg, rgba(185, 148, 96, 1) 35%, rgba(210, 141, 131, 1) 100%);
+}

@@ -9,9 +9,10 @@ function generate(codeP){
           fotoCard: pessoa.fotoCard.slice(),
           nomeCard: pessoa.nomeCard.slice(),
           textoCard: pessoa.textoCard.slice(),
-          genero: pessoa.genero
+          genero: pessoa.genero,
+          corID: pessoa.corID
       };
-      nameHeader.innerHTML = `Olá <span>${info.nome}</span>,<br>Seja bem vind${info.genero}!`
+      nameHeader.innerHTML = `Olá <span>${info.nome}</span>,<br>Seja bem vind${info.genero}!`;
       console.log(info.nomeCard[1])
       generateCards()
   } else {

@@ -44,7 +44,7 @@ document.addEventListener('click', () => {
 });
 
 function mailStart() {
-  document.body.classList.toggle('theu');
+  document.body.classList.toggle(`${info.corID}`);
   header.style.display = `block`
   cardContainer.style.display = `flex`
 }
