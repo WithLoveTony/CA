@@ -12,8 +12,8 @@ cards.forEach(card => {
         modal.style.display = 'block';
         document.body.classList.add("no-scroll");
     });
-    
 });
+
 
 closeButton.addEventListener('click', () => {
     modal.style.display = 'none';
