@@ -8,7 +8,10 @@
     background-color: rgba(0, 0, 0, 0.13);
     z-index: 1000;
 }
-
+.no-scroll {
+    overflow: hidden; /* Evita deslocamento lateral */
+  }
+  
 .modal-content {
     position: relative;
     background-color: #141414e3;
@@ -26,6 +29,7 @@
     gap: 10px;
     /* border: 1px solid red; */
     animation: slideUp 0.5s ease forwards;
+    overflow-y: auto;
 }
 
 .modal-content p {
@@ -42,4 +46,11 @@
     height: 5px;
     background-color: #ffffffab;
     cursor: pointer;
+}
+
+#modalImg{
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid #bbbbbb81;
+    margin: 16px 0;
 }
