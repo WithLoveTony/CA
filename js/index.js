@@ -58,3 +58,12 @@ if (pinCode == '1004') {
 } else if (pinCode == '2302') {
   generate('JU')
 }
+
+
+// const audio = document.getElementById('musica');
+// document.addEventListener('click', () => {
+//   const c = setTimeout(() => {
+//     audio.play();
+//     audio.volume = 0.1;
+//   })
+// })
